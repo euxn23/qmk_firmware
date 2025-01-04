@@ -19,3 +19,6 @@
 #pragma once
 
 #define ORYX_CONFIGURATOR
+
+#define KC_MHEN KC_INT5
+#define KC_HENK KC_INT4
