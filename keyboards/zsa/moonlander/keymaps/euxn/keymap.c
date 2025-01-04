@@ -3,6 +3,14 @@
 
 #define RGBLIGHT_ENABLE = no
 
+const key_override_t scln_override = ko_make_basic(MOD_MASK_SHIFT, KC_SCLN, KC_SCLN);
+const key_override_t cln_override = ko_make_basic(0, KC_SCLN, S(KC_SCLN));
+
+const key_override_t *key_overrides[] = {
+    &scln_override,
+    &cln_override,
+};
+
 enum layers {
     BASE,  // default layer
     META,
