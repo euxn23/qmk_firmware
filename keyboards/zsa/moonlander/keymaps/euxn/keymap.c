@@ -4,7 +4,7 @@
 #define RGBLIGHT_ENABLE = no
 
 const key_override_t scln_override = ko_make_basic(MOD_MASK_SHIFT, KC_SCLN, KC_SCLN);
-const key_override_t cln_override = ko_make_basic(0, KC_SCLN, S(KC_SCLN));
+const key_override_t cln_override = ko_make_with_layers_and_negmods(0, KC_SCLN, S(KC_SCLN), ~0, MOD_MASK_SHIFT);
 
 const key_override_t *key_overrides[] = {
     &scln_override,
