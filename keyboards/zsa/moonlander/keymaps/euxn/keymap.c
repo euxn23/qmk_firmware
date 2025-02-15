@@ -9,10 +9,14 @@ const key_override_t *key_overrides[] = {
     &cln_override,
 };
 
+#define KC_AST S(KC_8)
+#define KC_PLS S(KC_EQL)
+
 enum layers {
     BASE,  // default layer
     META,
     GAME,
+    CALC,
 };
 
 // clang-format off
@@ -31,7 +35,7 @@ LT(META,KC_MHEN),KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                      
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,           XXXXXXX, KC_VOLD, KC_MPRV, KC_MPLY, KC_MNXT, KC_VOLU, XXXXXXX,
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, TO(GAME),XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX,           XXXXXXX,          XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END,
+        TO(CALC),TO(GAME),XXXXXXX, XXXXXXX, XXXXXXX,          XXXXXXX,           XXXXXXX,          XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END,
                                             XXXXXXX, XXXXXXX, XXXXXXX,           XXXXXXX, XXXXXXX, XXXXXXX
     ),
 
@@ -42,5 +46,14 @@ LT(META,KC_MHEN),KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                      
         KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                                KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
         KC_LALT, TO(BASE),XXXXXXX, KC_F7,   KC_RPRN,          KC_GRV,            KC_QUOT,          KC_LPRN, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT,
                                             KC_SPC,  KC_LGUI, MO(META),         MO(META), KC_SPC,  KC_SPC
+    ),
+
+    [CALC] = LAYOUT_moonlander(
+        _______, XXXXXXX, KC_SLSH, KC_AST , KC_BSPC, XXXXXXX, XXXXXXX,           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, _______,
+        KC_TAB,  KC_7,    KC_8,    KC_9   , KC_MINS, XXXXXXX, XXXXXXX,           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+        XXXXXXX, KC_4,    KC_5,    KC_6   , KC_PLS,  XXXXXXX, _______,           _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,
+        _______, KC_1,    KC_2,    KC_3   , KC_ENT,  XXXXXXX,                             XXXXXXX, XXXXXXX, _______, _______, _______, XXXXXXX,
+        TO(BASE),KC_0,    KC_DOT,  KC_EQL , _______,          _______,           _______,          _______, _______, _______, _______, _______,
+                                            _______, XXXXXXX, XXXXXXX,           XXXXXXX, XXXXXXX, _______
     ),
 };
