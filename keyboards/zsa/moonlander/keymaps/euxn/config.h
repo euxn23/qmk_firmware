@@ -22,4 +22,4 @@
 
 #define KC_MHEN KC_INT5
 #define KC_HENK KC_INT4
-#define TAPPING_TERM 150
+#define TAPPING_TERM 200
