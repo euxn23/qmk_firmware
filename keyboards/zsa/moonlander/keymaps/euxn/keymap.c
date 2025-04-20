@@ -2,7 +2,7 @@
 #include "version.h"
 
 const key_override_t scln_override = ko_make_basic(MOD_MASK_SHIFT, KC_SCLN, KC_SCLN);
-const key_override_t cln_override = ko_make_with_layers_and_negmods(0, KC_SCLN, S(KC_SCLN), ~0, MOD_MASK_SHIFT);
+const key_override_t cln_override = ko_make_with_layers_and_negmods(0, KC_SCLN, RSFT(KC_SCLN), ~0, MOD_MASK_SHIFT);
 
 const key_override_t *key_overrides[] = {
     &scln_override,
@@ -50,10 +50,10 @@ LT(META,KC_MHEN),KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                      
 
     [CALC] = LAYOUT_moonlander(
         _______, XXXXXXX, KC_SLSH, KC_AST , KC_BSPC, XXXXXXX, XXXXXXX,           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, _______,
-        KC_TAB,  KC_7,    KC_8,    KC_9   , KC_MINS, XXXXXXX, XXXXXXX,           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-        XXXXXXX, KC_4,    KC_5,    KC_6   , KC_PLS,  XXXXXXX, _______,           _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,
-        _______, KC_1,    KC_2,    KC_3   , KC_ENT,  XXXXXXX,                             XXXXXXX, XXXXXXX, _______, _______, _______, XXXXXXX,
-        TO(BASE),KC_0,    KC_DOT,  KC_EQL , _______,          _______,           _______,          _______, _______, _______, _______, _______,
+        KC_TAB,  KC_KP_7, KC_KP_8, KC_KP_9, KC_MINS, XXXXXXX, XXXXXXX,           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+        XXXXXXX, KC_KP_4, KC_5,    KC_KP_6, KC_PLS,  XXXXXXX, _______,           _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, _______,
+        _______, KC_KP_1, KC_KP_2, KC_KP_3, KC_ENT,  XXXXXXX,                             XXXXXXX, XXXXXXX, _______, _______, _______, XXXXXXX,
+        TO(BASE),KC_KP_0, KC_DOT,  KC_EQL , _______,          _______,           _______,          _______, _______, _______, _______, _______,
                                             _______, XXXXXXX, XXXXXXX,           XXXXXXX, XXXXXXX, _______
     ),
 };
